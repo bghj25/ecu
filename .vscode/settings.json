@@ -1,0 +1,10 @@
+{
+    "cortex-debug.gdbPath": "C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/bin/arm-none-eabi-gdb",
+    "cortex-debug.stutilPath": "${workspaceFolder}/stlink-1.8.0-win32/bin/st-util",
+    "files.associations": {
+        "gd32f30x_adc.h": "c",
+        "gd32f30x.h": "c",
+        "gd32f30x_libopt.h": "c"
+    },
+    "cmake.configureOnOpen": true
+}

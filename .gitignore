@@ -1,0 +1,5 @@
+stlink-1.8.0-win32/
+*.d
+*.lst
+*.o
+*.pdf
