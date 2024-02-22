@@ -59,6 +59,7 @@ endif()
 file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false "C:/work/ECU/Project/*.cpp")
 set(OLD_GLOB
   "C:/work/ECU/Project/app.cpp"
+  "C:/work/ECU/Project/gpio.cpp"
   )
 if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
   message("-- GLOB mismatch!")

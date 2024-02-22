@@ -133,6 +133,7 @@ void gpio_afio_deinit(void)
     \param[out] none
     \retval     none
 */
+
 void gpio_init(uint32_t gpio_periph, uint32_t mode, uint32_t speed, uint32_t pin)
 {
     uint16_t i;

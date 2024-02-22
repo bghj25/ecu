@@ -51,6 +51,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/cpptest.dir/GD32F30x_standard_peripheral/Source/gd32f30x_wwdgt.c.obj.d"
   "CMakeFiles/cpptest.dir/Project/app.cpp.obj"
   "CMakeFiles/cpptest.dir/Project/app.cpp.obj.d"
+  "CMakeFiles/cpptest.dir/Project/gpio.cpp.obj"
+  "CMakeFiles/cpptest.dir/Project/gpio.cpp.obj.d"
   "CMakeFiles/cpptest.dir/Project/main.c.obj"
   "CMakeFiles/cpptest.dir/Project/main.c.obj.d"
   "CMakeFiles/cpptest.dir/startup_ARMCM4.S.obj"

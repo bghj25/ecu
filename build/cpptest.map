@@ -1639,10 +1639,9 @@ Discarded input sections
  .text          0x00000000        0x0 CMakeFiles/cpptest.dir/Project/app.cpp.obj
  .data          0x00000000        0x0 CMakeFiles/cpptest.dir/Project/app.cpp.obj
  .bss           0x00000000        0x0 CMakeFiles/cpptest.dir/Project/app.cpp.obj
- .text.cpp      0x00000000        0x8 CMakeFiles/cpptest.dir/Project/app.cpp.obj
- .comment       0x00000000       0x45 CMakeFiles/cpptest.dir/Project/app.cpp.obj
- .ARM.attributes
-                0x00000000       0x2e CMakeFiles/cpptest.dir/Project/app.cpp.obj
+ .text          0x00000000        0x0 CMakeFiles/cpptest.dir/Project/gpio.cpp.obj
+ .data          0x00000000        0x0 CMakeFiles/cpptest.dir/Project/gpio.cpp.obj
+ .bss           0x00000000        0x0 CMakeFiles/cpptest.dir/Project/gpio.cpp.obj
  .text          0x00000000        0x0 CMakeFiles/cpptest.dir/Project/main.c.obj
  .data          0x00000000        0x0 CMakeFiles/cpptest.dir/Project/main.c.obj
  .bss           0x00000000        0x0 CMakeFiles/cpptest.dir/Project/main.c.obj
@@ -2132,6 +2131,7 @@ LOAD CMakeFiles/cpptest.dir/GD32F30x_standard_peripheral/Source/gd32f30x_timer.c
 LOAD CMakeFiles/cpptest.dir/GD32F30x_standard_peripheral/Source/gd32f30x_usart.c.obj
 LOAD CMakeFiles/cpptest.dir/GD32F30x_standard_peripheral/Source/gd32f30x_wwdgt.c.obj
 LOAD CMakeFiles/cpptest.dir/Project/app.cpp.obj
+LOAD CMakeFiles/cpptest.dir/Project/gpio.cpp.obj
 LOAD CMakeFiles/cpptest.dir/Project/main.c.obj
 LOAD CMakeFiles/cpptest.dir/startup_ARMCM4.S.obj
 LOAD C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m/nofp\libstdc++_nano.a
@@ -2160,7 +2160,7 @@ LOAD C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/bin/../lib
                 0x00000400                        __STACK_SIZE = 0x400
                 0x00000c00                        __HEAP_SIZE = 0xc00
 
-.text           0x00000000     0x16d0
+.text           0x00000000     0x175c
  *(.vectors)
  .vectors       0x00000000      0x150 CMakeFiles/cpptest.dir/startup_ARMCM4.S.obj
                 0x00000000                __Vectors
@@ -2190,200 +2190,212 @@ LOAD C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/bin/../lib
  .text.rcu_periph_clock_enable
                 0x000005a8       0x44 CMakeFiles/cpptest.dir/GD32F30x_standard_peripheral/Source/gd32f30x_rcu.c.obj
                 0x000005a8                rcu_periph_clock_enable
- .text.main     0x000005ec       0x64 CMakeFiles/cpptest.dir/Project/main.c.obj
-                0x000005ec                main
- .text          0x00000650       0x58 CMakeFiles/cpptest.dir/startup_ARMCM4.S.obj
-                0x00000650                Reset_Handler
-                0x00000692                HardFault_Handler
-                0x00000694                TIMER5_IRQHandler
-                0x00000694                DebugMon_Handler
-                0x00000694                LVD_IRQHandler
-                0x00000694                CAN1_EWMC_IRQHandler
-                0x00000694                TIMER2_IRQHandler
-                0x00000694                EXTI2_IRQHandler
-                0x00000694                TIMER7_UP_TIMER12_IRQHandler
-                0x00000694                ADC0_1_IRQHandler
-                0x00000694                SysTick_Handler
-                0x00000694                PendSV_Handler
-                0x00000694                NMI_Handler
-                0x00000694                EXTI3_IRQHandler
-                0x00000694                USBFS_WKUP_IRQHandler
-                0x00000694                TIMER0_TRG_CMT_TIMER10_IRQHandler
-                0x00000694                USBFS_IRQHandler
-                0x00000694                TIMER3_IRQHandler
-                0x00000694                DMA0_Channel6_IRQHandler
-                0x00000694                I2C0_EV_IRQHandler
-                0x00000694                EXTI0_IRQHandler
-                0x00000694                CAN1_RX0_IRQHandler
-                0x00000694                TIMER7_TRG_CMT_TIMER13_IRQHandler
-                0x00000694                UsageFault_Handler
-                0x00000694                TIMER4_IRQHandler
-                0x00000694                SPI1_IRQHandler
-                0x00000694                DMA0_Channel0_IRQHandler
-                0x00000694                TAMPER_IRQHandler
-                0x00000694                TIMER0_BRK_TIMER8_IRQHandler
-                0x00000694                DMA1_Channel0_IRQHandler
-                0x00000694                TIMER7_BRK_TIMER11_IRQHandler
-                0x00000694                TIMER6_IRQHandler
-                0x00000694                DMA1_Channel4_IRQHandler
-                0x00000694                DMA0_Channel3_IRQHandler
-                0x00000694                I2C0_ER_IRQHandler
-                0x00000694                TIMER0_UP_TIMER9_IRQHandler
-                0x00000694                RTC_IRQHandler
-                0x00000694                RTC_Alarm_IRQHandler
-                0x00000694                CAN1_RX1_IRQHandler
-                0x00000694                DMA0_Channel2_IRQHandler
-                0x00000694                USART0_IRQHandler
-                0x00000694                TIMER1_IRQHandler
-                0x00000694                I2C1_EV_IRQHandler
-                0x00000694                UART4_IRQHandler
-                0x00000694                EXTI10_15_IRQHandler
-                0x00000694                DMA1_Channel1_IRQHandler
-                0x00000694                Default_Handler
-                0x00000694                TIMER7_Channel_IRQHandler
-                0x00000694                CAN0_TX_IRQHandler
-                0x00000694                WWDGT_IRQHandler
-                0x00000694                EXMC_IRQHandler
-                0x00000694                SPI2_IRQHandler
-                0x00000694                MemManage_Handler
-                0x00000694                CAN1_TX_IRQHandler
-                0x00000694                SVC_Handler
-                0x00000694                RCU_CTC_IRQHandler
-                0x00000694                EXTI4_IRQHandler
-                0x00000694                CAN0_RX1_IRQHandler
-                0x00000694                DMA0_Channel5_IRQHandler
-                0x00000694                DMA1_Channel3_IRQHandler
-                0x00000694                EXTI5_9_IRQHandler
-                0x00000694                DMA0_Channel1_IRQHandler
-                0x00000694                TIMER0_Channel_IRQHandler
-                0x00000694                EXTI1_IRQHandler
-                0x00000694                ENET_WKUP_IRQHandler
-                0x00000694                SPI0_IRQHandler
-                0x00000694                USART2_IRQHandler
-                0x00000694                CAN0_EWMC_IRQHandler
-                0x00000694                CAN0_RX0_IRQHandler
-                0x00000694                DMA1_Channel2_IRQHandler
-                0x00000694                BusFault_Handler
-                0x00000694                USART1_IRQHandler
-                0x00000694                UART3_IRQHandler
-                0x00000694                I2C1_ER_IRQHandler
-                0x00000694                FMC_IRQHandler
-                0x00000694                DMA0_Channel4_IRQHandler
-                0x00000694                ENET_IRQHandler
+ .text.cpp      0x000005ec       0x58 CMakeFiles/cpptest.dir/Project/app.cpp.obj
+                0x000005ec                cpp
+ .text._ZN7GpioPinC2Emmmm
+                0x00000644       0x44 CMakeFiles/cpptest.dir/Project/gpio.cpp.obj
+                0x00000644                GpioPin::GpioPin(unsigned long, unsigned long, unsigned long, unsigned long)
+                0x00000644                GpioPin::GpioPin(unsigned long, unsigned long, unsigned long, unsigned long)
+ .text._ZN7GpioPin3SetEv
+                0x00000688       0x20 CMakeFiles/cpptest.dir/Project/gpio.cpp.obj
+                0x00000688                GpioPin::Set()
+ .text._ZN7GpioPin5ResetEv
+                0x000006a8       0x20 CMakeFiles/cpptest.dir/Project/gpio.cpp.obj
+                0x000006a8                GpioPin::Reset()
+ .text.main     0x000006c8       0x14 CMakeFiles/cpptest.dir/Project/main.c.obj
+                0x000006c8                main
+ .text          0x000006dc       0x58 CMakeFiles/cpptest.dir/startup_ARMCM4.S.obj
+                0x000006dc                Reset_Handler
+                0x0000071e                HardFault_Handler
+                0x00000720                TIMER5_IRQHandler
+                0x00000720                DebugMon_Handler
+                0x00000720                LVD_IRQHandler
+                0x00000720                CAN1_EWMC_IRQHandler
+                0x00000720                TIMER2_IRQHandler
+                0x00000720                EXTI2_IRQHandler
+                0x00000720                TIMER7_UP_TIMER12_IRQHandler
+                0x00000720                ADC0_1_IRQHandler
+                0x00000720                SysTick_Handler
+                0x00000720                PendSV_Handler
+                0x00000720                NMI_Handler
+                0x00000720                EXTI3_IRQHandler
+                0x00000720                USBFS_WKUP_IRQHandler
+                0x00000720                TIMER0_TRG_CMT_TIMER10_IRQHandler
+                0x00000720                USBFS_IRQHandler
+                0x00000720                TIMER3_IRQHandler
+                0x00000720                DMA0_Channel6_IRQHandler
+                0x00000720                I2C0_EV_IRQHandler
+                0x00000720                EXTI0_IRQHandler
+                0x00000720                CAN1_RX0_IRQHandler
+                0x00000720                TIMER7_TRG_CMT_TIMER13_IRQHandler
+                0x00000720                UsageFault_Handler
+                0x00000720                TIMER4_IRQHandler
+                0x00000720                SPI1_IRQHandler
+                0x00000720                DMA0_Channel0_IRQHandler
+                0x00000720                TAMPER_IRQHandler
+                0x00000720                TIMER0_BRK_TIMER8_IRQHandler
+                0x00000720                DMA1_Channel0_IRQHandler
+                0x00000720                TIMER7_BRK_TIMER11_IRQHandler
+                0x00000720                TIMER6_IRQHandler
+                0x00000720                DMA1_Channel4_IRQHandler
+                0x00000720                DMA0_Channel3_IRQHandler
+                0x00000720                I2C0_ER_IRQHandler
+                0x00000720                TIMER0_UP_TIMER9_IRQHandler
+                0x00000720                RTC_IRQHandler
+                0x00000720                RTC_Alarm_IRQHandler
+                0x00000720                CAN1_RX1_IRQHandler
+                0x00000720                DMA0_Channel2_IRQHandler
+                0x00000720                USART0_IRQHandler
+                0x00000720                TIMER1_IRQHandler
+                0x00000720                I2C1_EV_IRQHandler
+                0x00000720                UART4_IRQHandler
+                0x00000720                EXTI10_15_IRQHandler
+                0x00000720                DMA1_Channel1_IRQHandler
+                0x00000720                Default_Handler
+                0x00000720                TIMER7_Channel_IRQHandler
+                0x00000720                CAN0_TX_IRQHandler
+                0x00000720                WWDGT_IRQHandler
+                0x00000720                EXMC_IRQHandler
+                0x00000720                SPI2_IRQHandler
+                0x00000720                MemManage_Handler
+                0x00000720                CAN1_TX_IRQHandler
+                0x00000720                SVC_Handler
+                0x00000720                RCU_CTC_IRQHandler
+                0x00000720                EXTI4_IRQHandler
+                0x00000720                CAN0_RX1_IRQHandler
+                0x00000720                DMA0_Channel5_IRQHandler
+                0x00000720                DMA1_Channel3_IRQHandler
+                0x00000720                EXTI5_9_IRQHandler
+                0x00000720                DMA0_Channel1_IRQHandler
+                0x00000720                TIMER0_Channel_IRQHandler
+                0x00000720                EXTI1_IRQHandler
+                0x00000720                ENET_WKUP_IRQHandler
+                0x00000720                SPI0_IRQHandler
+                0x00000720                USART2_IRQHandler
+                0x00000720                CAN0_EWMC_IRQHandler
+                0x00000720                CAN0_RX0_IRQHandler
+                0x00000720                DMA1_Channel2_IRQHandler
+                0x00000720                BusFault_Handler
+                0x00000720                USART1_IRQHandler
+                0x00000720                UART3_IRQHandler
+                0x00000720                I2C1_ER_IRQHandler
+                0x00000720                FMC_IRQHandler
+                0x00000720                DMA0_Channel4_IRQHandler
+                0x00000720                ENET_IRQHandler
  .text.selfrel_offset31
-                0x000006a8       0x14 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m/nofp\libgcc.a(unwind-arm.o)
+                0x00000734       0x14 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m/nofp\libgcc.a(unwind-arm.o)
  .text.search_EIT_table
-                0x000006bc       0x68 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m/nofp\libgcc.a(unwind-arm.o)
+                0x00000748       0x68 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m/nofp\libgcc.a(unwind-arm.o)
  .text.__gnu_unwind_get_pr_addr
-                0x00000724       0x28 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m/nofp\libgcc.a(unwind-arm.o)
+                0x000007b0       0x28 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m/nofp\libgcc.a(unwind-arm.o)
  .text.get_eit_entry
-                0x0000074c       0x98 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m/nofp\libgcc.a(unwind-arm.o)
+                0x000007d8       0x98 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m/nofp\libgcc.a(unwind-arm.o)
  .text.restore_non_core_regs
-                0x000007e4       0x58 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m/nofp\libgcc.a(unwind-arm.o)
+                0x00000870       0x58 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m/nofp\libgcc.a(unwind-arm.o)
  .text._Unwind_decode_typeinfo_ptr.constprop.0
-                0x0000083c        0xc C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m/nofp\libgcc.a(unwind-arm.o)
+                0x000008c8        0xc C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m/nofp\libgcc.a(unwind-arm.o)
  .text._Unwind_DebugHook
-                0x00000848        0x4 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m/nofp\libgcc.a(unwind-arm.o)
+                0x000008d4        0x4 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m/nofp\libgcc.a(unwind-arm.o)
  .text.unwind_phase2
-                0x0000084c       0x3c C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m/nofp\libgcc.a(unwind-arm.o)
+                0x000008d8       0x3c C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m/nofp\libgcc.a(unwind-arm.o)
  .text.unwind_phase2_forced
-                0x00000888       0xd8 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m/nofp\libgcc.a(unwind-arm.o)
+                0x00000914       0xd8 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m/nofp\libgcc.a(unwind-arm.o)
  .text.__gnu_Unwind_RaiseException
-                0x00000960       0x68 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m/nofp\libgcc.a(unwind-arm.o)
-                0x00000960                __gnu_Unwind_RaiseException
+                0x000009ec       0x68 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m/nofp\libgcc.a(unwind-arm.o)
+                0x000009ec                __gnu_Unwind_RaiseException
  .text.__gnu_Unwind_ForcedUnwind
-                0x000009c8       0x10 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m/nofp\libgcc.a(unwind-arm.o)
-                0x000009c8                __gnu_Unwind_ForcedUnwind
+                0x00000a54       0x10 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m/nofp\libgcc.a(unwind-arm.o)
+                0x00000a54                __gnu_Unwind_ForcedUnwind
  .text.__gnu_Unwind_Resume
-                0x000009d8       0x44 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m/nofp\libgcc.a(unwind-arm.o)
-                0x000009d8                __gnu_Unwind_Resume
+                0x00000a64       0x44 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m/nofp\libgcc.a(unwind-arm.o)
+                0x00000a64                __gnu_Unwind_Resume
  .text.__gnu_Unwind_Resume_or_Rethrow
-                0x00000a1c       0x14 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m/nofp\libgcc.a(unwind-arm.o)
-                0x00000a1c                __gnu_Unwind_Resume_or_Rethrow
+                0x00000aa8       0x14 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m/nofp\libgcc.a(unwind-arm.o)
+                0x00000aa8                __gnu_Unwind_Resume_or_Rethrow
  .text._Unwind_VRS_Get
-                0x00000a30       0x34 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m/nofp\libgcc.a(unwind-arm.o)
-                0x00000a30                _Unwind_VRS_Get
+                0x00000abc       0x34 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m/nofp\libgcc.a(unwind-arm.o)
+                0x00000abc                _Unwind_VRS_Get
  .text._Unwind_GetGR
-                0x00000a64       0x1c C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m/nofp\libgcc.a(unwind-arm.o)
+                0x00000af0       0x1c C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m/nofp\libgcc.a(unwind-arm.o)
  .text._Unwind_VRS_Set
-                0x00000a80       0x34 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m/nofp\libgcc.a(unwind-arm.o)
-                0x00000a80                _Unwind_VRS_Set
+                0x00000b0c       0x34 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m/nofp\libgcc.a(unwind-arm.o)
+                0x00000b0c                _Unwind_VRS_Set
  .text._Unwind_SetGR
-                0x00000ab4       0x18 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m/nofp\libgcc.a(unwind-arm.o)
+                0x00000b40       0x18 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m/nofp\libgcc.a(unwind-arm.o)
  .text.__gnu_Unwind_Backtrace
-                0x00000acc       0x84 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m/nofp\libgcc.a(unwind-arm.o)
-                0x00000acc                __gnu_Unwind_Backtrace
+                0x00000b58       0x84 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m/nofp\libgcc.a(unwind-arm.o)
+                0x00000b58                __gnu_Unwind_Backtrace
  .text.__gnu_unwind_pr_common
-                0x00000b50      0x2a4 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m/nofp\libgcc.a(unwind-arm.o)
+                0x00000bdc      0x2a4 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m/nofp\libgcc.a(unwind-arm.o)
  .text.__aeabi_unwind_cpp_pr0
-                0x00000df4        0x8 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m/nofp\libgcc.a(unwind-arm.o)
-                0x00000df4                __aeabi_unwind_cpp_pr0
+                0x00000e80        0x8 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m/nofp\libgcc.a(unwind-arm.o)
+                0x00000e80                __aeabi_unwind_cpp_pr0
  .text.__aeabi_unwind_cpp_pr1
-                0x00000dfc        0x8 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m/nofp\libgcc.a(unwind-arm.o)
-                0x00000dfc                __aeabi_unwind_cpp_pr1
+                0x00000e88        0x8 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m/nofp\libgcc.a(unwind-arm.o)
+                0x00000e88                __aeabi_unwind_cpp_pr1
  .text.__aeabi_unwind_cpp_pr2
-                0x00000e04        0x8 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m/nofp\libgcc.a(unwind-arm.o)
-                0x00000e04                __aeabi_unwind_cpp_pr2
+                0x00000e90        0x8 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m/nofp\libgcc.a(unwind-arm.o)
+                0x00000e90                __aeabi_unwind_cpp_pr2
  .text._Unwind_VRS_Pop
-                0x00000e0c      0x2f0 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m/nofp\libgcc.a(unwind-arm.o)
-                0x00000e0c                _Unwind_VRS_Pop
- .text          0x000010fc      0x1ac C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m/nofp\libgcc.a(libunwind.o)
-                0x000010fc                __restore_core_regs
-                0x000010fc                restore_core_regs
-                0x00001114                __gnu_Unwind_Restore_VFP
-                0x0000111c                __gnu_Unwind_Save_VFP
-                0x00001124                __gnu_Unwind_Restore_VFP_D
-                0x0000112c                __gnu_Unwind_Save_VFP_D
-                0x00001134                __gnu_Unwind_Restore_VFP_D_16_to_31
-                0x0000113c                __gnu_Unwind_Save_VFP_D_16_to_31
-                0x00001144                __gnu_Unwind_Restore_WMMXD
-                0x00001188                __gnu_Unwind_Save_WMMXD
-                0x000011cc                __gnu_Unwind_Restore_WMMXC
-                0x000011e0                __gnu_Unwind_Save_WMMXC
-                0x000011f4                ___Unwind_RaiseException
-                0x000011f4                _Unwind_RaiseException
-                0x00001218                _Unwind_Resume
-                0x00001218                ___Unwind_Resume
-                0x0000123c                _Unwind_Resume_or_Rethrow
-                0x0000123c                ___Unwind_Resume_or_Rethrow
-                0x00001260                _Unwind_ForcedUnwind
-                0x00001260                ___Unwind_ForcedUnwind
-                0x00001284                ___Unwind_Backtrace
-                0x00001284                _Unwind_Backtrace
+                0x00000e98      0x2f0 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m/nofp\libgcc.a(unwind-arm.o)
+                0x00000e98                _Unwind_VRS_Pop
+ .text          0x00001188      0x1ac C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m/nofp\libgcc.a(libunwind.o)
+                0x00001188                __restore_core_regs
+                0x00001188                restore_core_regs
+                0x000011a0                __gnu_Unwind_Restore_VFP
+                0x000011a8                __gnu_Unwind_Save_VFP
+                0x000011b0                __gnu_Unwind_Restore_VFP_D
+                0x000011b8                __gnu_Unwind_Save_VFP_D
+                0x000011c0                __gnu_Unwind_Restore_VFP_D_16_to_31
+                0x000011c8                __gnu_Unwind_Save_VFP_D_16_to_31
+                0x000011d0                __gnu_Unwind_Restore_WMMXD
+                0x00001214                __gnu_Unwind_Save_WMMXD
+                0x00001258                __gnu_Unwind_Restore_WMMXC
+                0x0000126c                __gnu_Unwind_Save_WMMXC
+                0x00001280                ___Unwind_RaiseException
+                0x00001280                _Unwind_RaiseException
+                0x000012a4                _Unwind_Resume
+                0x000012a4                ___Unwind_Resume
+                0x000012c8                _Unwind_Resume_or_Rethrow
+                0x000012c8                ___Unwind_Resume_or_Rethrow
+                0x000012ec                _Unwind_ForcedUnwind
+                0x000012ec                ___Unwind_ForcedUnwind
+                0x00001310                ___Unwind_Backtrace
+                0x00001310                _Unwind_Backtrace
  .text.next_unwind_byte
-                0x000012a8       0x38 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m/nofp\libgcc.a(pr-support.o)
+                0x00001334       0x38 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m/nofp\libgcc.a(pr-support.o)
  .text.__gnu_unwind_execute
-                0x000012e0      0x2fc C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m/nofp\libgcc.a(pr-support.o)
-                0x000012e0                __gnu_unwind_execute
- .text.abort    0x000015dc        0xe C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m/nofp\libc_nano.a(libc_a-abort.o)
-                0x000015dc                abort
+                0x0000136c      0x2fc C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m/nofp\libgcc.a(pr-support.o)
+                0x0000136c                __gnu_unwind_execute
+ .text.abort    0x00001668        0xe C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m/nofp\libc_nano.a(libc_a-abort.o)
+                0x00001668                abort
  .text._raise_r
-                0x000015ea       0x50 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m/nofp\libc_nano.a(libc_a-signal.o)
-                0x000015ea                _raise_r
- *fill*         0x0000163a        0x2 
- .text.raise    0x0000163c       0x10 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m/nofp\libc_nano.a(libc_a-signal.o)
-                0x0000163c                raise
- .text._kill_r  0x0000164c       0x24 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m/nofp\libc_nano.a(libc_a-signalr.o)
-                0x0000164c                _kill_r
+                0x00001676       0x50 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m/nofp\libc_nano.a(libc_a-signal.o)
+                0x00001676                _raise_r
+ *fill*         0x000016c6        0x2 
+ .text.raise    0x000016c8       0x10 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m/nofp\libc_nano.a(libc_a-signal.o)
+                0x000016c8                raise
+ .text._kill_r  0x000016d8       0x24 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m/nofp\libc_nano.a(libc_a-signalr.o)
+                0x000016d8                _kill_r
  .text._getpid_r
-                0x00001670        0x4 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m/nofp\libc_nano.a(libc_a-signalr.o)
-                0x00001670                _getpid_r
- .text.memcpy   0x00001674       0x1c C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m/nofp\libc_nano.a(libc_a-memcpy-stub.o)
-                0x00001674                memcpy
- .text._getpid  0x00001690       0x10 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m/nofp\libnosys.a(getpid.o)
-                0x00001690                _getpid
- .text._kill    0x000016a0       0x10 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m/nofp\libnosys.a(kill.o)
-                0x000016a0                _kill
- .text._exit    0x000016b0        0x4 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m/nofp\libnosys.a(_exit.o)
-                0x000016b0                _exit
+                0x000016fc        0x4 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m/nofp\libc_nano.a(libc_a-signalr.o)
+                0x000016fc                _getpid_r
+ .text.memcpy   0x00001700       0x1c C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m/nofp\libc_nano.a(libc_a-memcpy-stub.o)
+                0x00001700                memcpy
+ .text._getpid  0x0000171c       0x10 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m/nofp\libnosys.a(getpid.o)
+                0x0000171c                _getpid
+ .text._kill    0x0000172c       0x10 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m/nofp\libnosys.a(kill.o)
+                0x0000172c                _kill
+ .text._exit    0x0000173c        0x4 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m/nofp\libnosys.a(_exit.o)
+                0x0000173c                _exit
  *(.init)
- .init          0x000016b4        0x4 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m/nofp/crti.o
-                0x000016b4                _init
- .init          0x000016b8        0x8 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m/nofp/crtn.o
+ .init          0x00001740        0x4 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m/nofp/crti.o
+                0x00001740                _init
+ .init          0x00001744        0x8 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m/nofp/crtn.o
  *(.fini)
- .fini          0x000016c0        0x4 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m/nofp/crti.o
-                0x000016c0                _fini
- .fini          0x000016c4        0x8 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m/nofp/crtn.o
+ .fini          0x0000174c        0x4 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m/nofp/crti.o
+                0x0000174c                _fini
+ .fini          0x00001750        0x8 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m/nofp/crtn.o
  *crtbegin.o(.ctors)
  *crtbegin?.o(.ctors)
  *(EXCLUDE_FILE(*crtend.o *crtend?.o) .ctors)
@@ -2396,114 +2408,114 @@ LOAD C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/bin/../lib
  *(.dtors)
  *(.rodata*)
  *(.eh_frame*)
- .eh_frame      0x000016cc        0x0 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m/nofp/crtbegin.o
- .eh_frame      0x000016cc        0x4 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m/nofp/crtend.o
+ .eh_frame      0x00001758        0x0 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m/nofp/crtbegin.o
+ .eh_frame      0x00001758        0x4 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m/nofp/crtend.o
 
-.glue_7         0x000016d0        0x0
- .glue_7        0x000016d0        0x0 linker stubs
+.glue_7         0x0000175c        0x0
+ .glue_7        0x0000175c        0x0 linker stubs
 
-.glue_7t        0x000016d0        0x0
- .glue_7t       0x000016d0        0x0 linker stubs
+.glue_7t        0x0000175c        0x0
+ .glue_7t       0x0000175c        0x0 linker stubs
 
-.vfp11_veneer   0x000016d0        0x0
- .vfp11_veneer  0x000016d0        0x0 linker stubs
+.vfp11_veneer   0x0000175c        0x0
+ .vfp11_veneer  0x0000175c        0x0 linker stubs
 
-.v4_bx          0x000016d0        0x0
- .v4_bx         0x000016d0        0x0 linker stubs
+.v4_bx          0x0000175c        0x0
+ .v4_bx         0x0000175c        0x0 linker stubs
 
-.iplt           0x000016d0        0x0
- .iplt          0x000016d0        0x0 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m/nofp/crtbegin.o
+.iplt           0x0000175c        0x0
+ .iplt          0x0000175c        0x0 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m/nofp/crtbegin.o
 
 .ARM.extab
  *(.ARM.extab* .gnu.linkonce.armextab.*)
-                0x000016d0                        __exidx_start = .
+                0x0000175c                        __exidx_start = .
 
-.ARM.exidx      0x000016d0       0x90
+.ARM.exidx      0x0000175c       0x90
  *(.ARM.exidx* .gnu.linkonce.armexidx.*)
- .ARM.exidx     0x000016d0        0x8 CMakeFiles/cpptest.dir/startup_ARMCM4.S.obj
+ .ARM.exidx     0x0000175c        0x8 CMakeFiles/cpptest.dir/startup_ARMCM4.S.obj
                                  0x18 (size before relaxing)
  .ARM.exidx.text.selfrel_offset31
-                0x000016d8        0x8 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m/nofp\libgcc.a(unwind-arm.o)
+                0x00001764        0x8 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m/nofp\libgcc.a(unwind-arm.o)
  .ARM.exidx.text.search_EIT_table
-                0x000016e0        0x0 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m/nofp\libgcc.a(unwind-arm.o)
+                0x0000176c        0x0 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m/nofp\libgcc.a(unwind-arm.o)
                                   0x8 (size before relaxing)
  .ARM.exidx.text.__gnu_unwind_get_pr_addr
-                0x000016e0        0x0 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m/nofp\libgcc.a(unwind-arm.o)
+                0x0000176c        0x0 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m/nofp\libgcc.a(unwind-arm.o)
                                   0x8 (size before relaxing)
  .ARM.exidx.text.get_eit_entry
-                0x000016e0        0x8 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m/nofp\libgcc.a(unwind-arm.o)
+                0x0000176c        0x8 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m/nofp\libgcc.a(unwind-arm.o)
  .ARM.exidx.text.restore_non_core_regs
-                0x000016e8        0x8 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m/nofp\libgcc.a(unwind-arm.o)
+                0x00001774        0x8 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m/nofp\libgcc.a(unwind-arm.o)
  .ARM.exidx.text._Unwind_decode_typeinfo_ptr.constprop.0
-                0x000016f0        0x8 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m/nofp\libgcc.a(unwind-arm.o)
+                0x0000177c        0x8 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m/nofp\libgcc.a(unwind-arm.o)
  .ARM.exidx.text._Unwind_DebugHook
-                0x000016f8        0x0 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m/nofp\libgcc.a(unwind-arm.o)
+                0x00001784        0x0 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m/nofp\libgcc.a(unwind-arm.o)
                                   0x8 (size before relaxing)
  .ARM.exidx.text.unwind_phase2
-                0x000016f8        0x8 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m/nofp\libgcc.a(unwind-arm.o)
+                0x00001784        0x8 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m/nofp\libgcc.a(unwind-arm.o)
  .ARM.exidx.text.unwind_phase2_forced
-                0x00001700        0x8 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m/nofp\libgcc.a(unwind-arm.o)
+                0x0000178c        0x8 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m/nofp\libgcc.a(unwind-arm.o)
  .ARM.exidx.text.__gnu_Unwind_RaiseException
-                0x00001708        0x8 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m/nofp\libgcc.a(unwind-arm.o)
+                0x00001794        0x8 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m/nofp\libgcc.a(unwind-arm.o)
  .ARM.exidx.text.__gnu_Unwind_ForcedUnwind
-                0x00001710        0x8 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m/nofp\libgcc.a(unwind-arm.o)
+                0x0000179c        0x8 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m/nofp\libgcc.a(unwind-arm.o)
  .ARM.exidx.text.__gnu_Unwind_Resume
-                0x00001718        0x8 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m/nofp\libgcc.a(unwind-arm.o)
+                0x000017a4        0x8 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m/nofp\libgcc.a(unwind-arm.o)
  .ARM.exidx.text.__gnu_Unwind_Resume_or_Rethrow
-                0x00001720        0x8 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m/nofp\libgcc.a(unwind-arm.o)
+                0x000017ac        0x8 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m/nofp\libgcc.a(unwind-arm.o)
  .ARM.exidx.text._Unwind_VRS_Get
-                0x00001728        0x0 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m/nofp\libgcc.a(unwind-arm.o)
+                0x000017b4        0x0 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m/nofp\libgcc.a(unwind-arm.o)
                                   0x8 (size before relaxing)
  .ARM.exidx.text._Unwind_GetGR
-                0x00001728        0x0 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m/nofp\libgcc.a(unwind-arm.o)
+                0x000017b4        0x0 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m/nofp\libgcc.a(unwind-arm.o)
                                   0x8 (size before relaxing)
  .ARM.exidx.text._Unwind_VRS_Set
-                0x00001728        0x0 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m/nofp\libgcc.a(unwind-arm.o)
+                0x000017b4        0x0 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m/nofp\libgcc.a(unwind-arm.o)
                                   0x8 (size before relaxing)
  .ARM.exidx.text._Unwind_SetGR
-                0x00001728        0x0 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m/nofp\libgcc.a(unwind-arm.o)
+                0x000017b4        0x0 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m/nofp\libgcc.a(unwind-arm.o)
                                   0x8 (size before relaxing)
  .ARM.exidx.text.__gnu_Unwind_Backtrace
-                0x00001728        0x8 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m/nofp\libgcc.a(unwind-arm.o)
+                0x000017b4        0x8 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m/nofp\libgcc.a(unwind-arm.o)
  .ARM.exidx.text.__gnu_unwind_pr_common
-                0x00001730        0x8 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m/nofp\libgcc.a(unwind-arm.o)
+                0x000017bc        0x8 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m/nofp\libgcc.a(unwind-arm.o)
  .ARM.exidx.text.__aeabi_unwind_cpp_pr0
-                0x00001738        0x8 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m/nofp\libgcc.a(unwind-arm.o)
+                0x000017c4        0x8 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m/nofp\libgcc.a(unwind-arm.o)
  .ARM.exidx.text.__aeabi_unwind_cpp_pr1
-                0x00001740        0x0 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m/nofp\libgcc.a(unwind-arm.o)
+                0x000017cc        0x0 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m/nofp\libgcc.a(unwind-arm.o)
                                   0x8 (size before relaxing)
  .ARM.exidx.text.__aeabi_unwind_cpp_pr2
-                0x00001740        0x0 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m/nofp\libgcc.a(unwind-arm.o)
+                0x000017cc        0x0 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m/nofp\libgcc.a(unwind-arm.o)
                                   0x8 (size before relaxing)
  .ARM.exidx.text._Unwind_VRS_Pop
-                0x00001740       0x10 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m/nofp\libgcc.a(unwind-arm.o)
+                0x000017cc       0x10 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m/nofp\libgcc.a(unwind-arm.o)
                                   0x8 (size before relaxing)
  .ARM.exidx.text.next_unwind_byte
-                0x00001750        0x0 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m/nofp\libgcc.a(pr-support.o)
+                0x000017dc        0x0 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m/nofp\libgcc.a(pr-support.o)
                                   0x8 (size before relaxing)
  .ARM.exidx.text.__gnu_unwind_execute
-                0x00001750       0x10 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m/nofp\libgcc.a(pr-support.o)
+                0x000017dc       0x10 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m/nofp\libgcc.a(pr-support.o)
                                   0x8 (size before relaxing)
-                0x00001760                        __exidx_end = .
+                0x000017ec                        __exidx_end = .
 
-.rel.dyn        0x00001760        0x0
- .rel.iplt      0x00001760        0x0 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m/nofp/crtbegin.o
+.rel.dyn        0x000017ec        0x0
+ .rel.iplt      0x000017ec        0x0 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m/nofp/crtbegin.o
 
-.copy.table     0x00001760        0xc
-                0x00001760                        . = ALIGN (0x4)
-                0x00001760                        __copy_table_start__ = .
-                0x00001760        0x4 LONG 0x176c __etext
-                0x00001764        0x4 LONG 0x20000000 __data_start__
-                0x00001768        0x4 LONG 0x16 ((__data_end__ - __data_start__) / 0x4)
-                0x0000176c                        __copy_table_end__ = .
+.copy.table     0x000017ec        0xc
+                0x000017ec                        . = ALIGN (0x4)
+                0x000017ec                        __copy_table_start__ = .
+                0x000017ec        0x4 LONG 0x17f8 __etext
+                0x000017f0        0x4 LONG 0x20000000 __data_start__
+                0x000017f4        0x4 LONG 0x16 ((__data_end__ - __data_start__) / 0x4)
+                0x000017f8                        __copy_table_end__ = .
 
-.zero.table     0x0000176c        0x0
-                0x0000176c                        . = ALIGN (0x4)
-                0x0000176c                        __zero_table_start__ = .
-                0x0000176c                        __zero_table_end__ = .
-                0x0000176c                        __etext = ALIGN (0x4)
+.zero.table     0x000017f8        0x0
+                0x000017f8                        . = ALIGN (0x4)
+                0x000017f8                        __zero_table_start__ = .
+                0x000017f8                        __zero_table_end__ = .
+                0x000017f8                        __etext = ALIGN (0x4)
 
-.data           0x20000000       0x58 load address 0x0000176c
+.data           0x20000000       0x58 load address 0x000017f8
                 0x20000000                        __data_start__ = .
  *(vtable)
  *(.data)
@@ -2535,13 +2547,13 @@ LOAD C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/bin/../lib
                 0x20000058                        __data_end__ = .
 
 .tm_clone_table
-                0x20000058        0x0 load address 0x000017c4
+                0x20000058        0x0 load address 0x00001850
  .tm_clone_table
                 0x20000058        0x0 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m/nofp/crtbegin.o
  .tm_clone_table
                 0x20000058        0x0 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m/nofp/crtend.o
 
-.igot.plt       0x20000058        0x0 load address 0x000017c4
+.igot.plt       0x20000058        0x0 load address 0x00001850
  .igot.plt      0x20000058        0x0 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m/nofp/crtbegin.o
 
 .bss            0x20000058      0x158
@@ -2605,45 +2617,51 @@ LOAD C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/bin/../lib
  .ARM.attributes
                 0x000000a8       0x2e CMakeFiles/cpptest.dir/GD32F30x_standard_peripheral/Source/gd32f30x_rcu.c.obj
  .ARM.attributes
-                0x000000d6       0x2e CMakeFiles/cpptest.dir/Project/main.c.obj
+                0x000000d6       0x2e CMakeFiles/cpptest.dir/Project/app.cpp.obj
  .ARM.attributes
-                0x00000104       0x21 CMakeFiles/cpptest.dir/startup_ARMCM4.S.obj
+                0x00000104       0x2e CMakeFiles/cpptest.dir/Project/gpio.cpp.obj
  .ARM.attributes
-                0x00000125       0x2e C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m/nofp\libc_nano.a(libc_a-findfp.o)
+                0x00000132       0x2e CMakeFiles/cpptest.dir/Project/main.c.obj
  .ARM.attributes
-                0x00000153       0x2e C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m/nofp\libc_nano.a(libc_a-reent.o)
+                0x00000160       0x21 CMakeFiles/cpptest.dir/startup_ARMCM4.S.obj
  .ARM.attributes
-                0x00000181       0x2e C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m/nofp\libc_nano.a(libc_a-impure.o)
+                0x00000181       0x2e C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m/nofp\libc_nano.a(libc_a-findfp.o)
  .ARM.attributes
-                0x000001af       0x2e C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m/nofp\libgcc.a(unwind-arm.o)
+                0x000001af       0x2e C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m/nofp\libc_nano.a(libc_a-reent.o)
  .ARM.attributes
-                0x000001dd       0x1e C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m/nofp\libgcc.a(libunwind.o)
+                0x000001dd       0x2e C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m/nofp\libc_nano.a(libc_a-impure.o)
  .ARM.attributes
-                0x000001fb       0x2e C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m/nofp\libgcc.a(pr-support.o)
+                0x0000020b       0x2e C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m/nofp\libgcc.a(unwind-arm.o)
  .ARM.attributes
-                0x00000229       0x2e C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m/nofp\libc_nano.a(libc_a-abort.o)
+                0x00000239       0x1e C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m/nofp\libgcc.a(libunwind.o)
  .ARM.attributes
-                0x00000257       0x2e C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m/nofp\libc_nano.a(libc_a-signal.o)
+                0x00000257       0x2e C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m/nofp\libgcc.a(pr-support.o)
  .ARM.attributes
-                0x00000285       0x2e C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m/nofp\libc_nano.a(libc_a-signalr.o)
+                0x00000285       0x2e C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m/nofp\libc_nano.a(libc_a-abort.o)
  .ARM.attributes
-                0x000002b3       0x2e C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m/nofp\libc_nano.a(libc_a-memcpy-stub.o)
+                0x000002b3       0x2e C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m/nofp\libc_nano.a(libc_a-signal.o)
  .ARM.attributes
-                0x000002e1       0x2e C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m/nofp\libnosys.a(getpid.o)
+                0x000002e1       0x2e C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m/nofp\libc_nano.a(libc_a-signalr.o)
  .ARM.attributes
-                0x0000030f       0x2e C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m/nofp\libnosys.a(kill.o)
+                0x0000030f       0x2e C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m/nofp\libc_nano.a(libc_a-memcpy-stub.o)
  .ARM.attributes
-                0x0000033d       0x2e C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m/nofp\libnosys.a(_exit.o)
+                0x0000033d       0x2e C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m/nofp\libnosys.a(getpid.o)
  .ARM.attributes
-                0x0000036b       0x2e C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m/nofp/crtend.o
+                0x0000036b       0x2e C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m/nofp\libnosys.a(kill.o)
  .ARM.attributes
-                0x00000399       0x1e C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m/nofp/crtn.o
+                0x00000399       0x2e C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m/nofp\libnosys.a(_exit.o)
+ .ARM.attributes
+                0x000003c7       0x2e C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m/nofp/crtend.o
+ .ARM.attributes
+                0x000003f5       0x1e C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m/nofp/crtn.o
 
 .comment        0x00000000       0x44
  .comment       0x00000000       0x44 CMakeFiles/cpptest.dir/CMSIS/GD/GD32F30x/Source/system_gd32f30x.c.obj
                                  0x45 (size before relaxing)
  .comment       0x00000044       0x45 CMakeFiles/cpptest.dir/GD32F30x_standard_peripheral/Source/gd32f30x_gpio.c.obj
  .comment       0x00000044       0x45 CMakeFiles/cpptest.dir/GD32F30x_standard_peripheral/Source/gd32f30x_rcu.c.obj
+ .comment       0x00000044       0x45 CMakeFiles/cpptest.dir/Project/app.cpp.obj
+ .comment       0x00000044       0x45 CMakeFiles/cpptest.dir/Project/gpio.cpp.obj
  .comment       0x00000044       0x45 CMakeFiles/cpptest.dir/Project/main.c.obj
 
 .debug_frame    0x00000000      0x700

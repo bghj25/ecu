@@ -4,7 +4,8 @@
     "files.associations": {
         "gd32f30x_adc.h": "c",
         "gd32f30x.h": "c",
-        "gd32f30x_libopt.h": "c"
+        "gd32f30x_libopt.h": "c",
+        "gd32f30x_rcu.h": "c"
     },
     "cmake.configureOnOpen": true
 }

@@ -433,10 +433,24 @@ CMakeFiles/cpptest.dir/Project/app.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/cpptest.dir/Project/app.cpp.s"
 	"C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/bin/arm-none-eabi-g++.exe" -fdata-sections -ffunction-sections --specs=nano.specs -Wl,--gc-sections -fno-rtti -fno-exceptions -fno-threadsafe-statics $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:/work/ECU/Project/app.cpp -o CMakeFiles/cpptest.dir/Project/app.cpp.s
 
+CMakeFiles/cpptest.dir/Project/gpio.cpp.obj: CMakeFiles/cpptest.dir/flags.make
+CMakeFiles/cpptest.dir/Project/gpio.cpp.obj: C:/work/ECU/Project/gpio.cpp
+CMakeFiles/cpptest.dir/Project/gpio.cpp.obj: CMakeFiles/cpptest.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:/work/ECU/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building CXX object CMakeFiles/cpptest.dir/Project/gpio.cpp.obj"
+	"C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/bin/arm-none-eabi-g++.exe" -fdata-sections -ffunction-sections --specs=nano.specs -Wl,--gc-sections -fno-rtti -fno-exceptions -fno-threadsafe-statics $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/cpptest.dir/Project/gpio.cpp.obj -MF CMakeFiles/cpptest.dir/Project/gpio.cpp.obj.d -o CMakeFiles/cpptest.dir/Project/gpio.cpp.obj -c C:/work/ECU/Project/gpio.cpp
+
+CMakeFiles/cpptest.dir/Project/gpio.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/cpptest.dir/Project/gpio.cpp.i"
+	"C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/bin/arm-none-eabi-g++.exe" -fdata-sections -ffunction-sections --specs=nano.specs -Wl,--gc-sections -fno-rtti -fno-exceptions -fno-threadsafe-statics $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:/work/ECU/Project/gpio.cpp > CMakeFiles/cpptest.dir/Project/gpio.cpp.i
+
+CMakeFiles/cpptest.dir/Project/gpio.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/cpptest.dir/Project/gpio.cpp.s"
+	"C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/bin/arm-none-eabi-g++.exe" -fdata-sections -ffunction-sections --specs=nano.specs -Wl,--gc-sections -fno-rtti -fno-exceptions -fno-threadsafe-statics $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:/work/ECU/Project/gpio.cpp -o CMakeFiles/cpptest.dir/Project/gpio.cpp.s
+
 CMakeFiles/cpptest.dir/Project/main.c.obj: CMakeFiles/cpptest.dir/flags.make
 CMakeFiles/cpptest.dir/Project/main.c.obj: C:/work/ECU/Project/main.c
 CMakeFiles/cpptest.dir/Project/main.c.obj: CMakeFiles/cpptest.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:/work/ECU/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building C object CMakeFiles/cpptest.dir/Project/main.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:/work/ECU/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building C object CMakeFiles/cpptest.dir/Project/main.c.obj"
 	"C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/bin/arm-none-eabi-gcc.exe" -fdata-sections -ffunction-sections --specs=nano.specs -Wl,--gc-sections $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/cpptest.dir/Project/main.c.obj -MF CMakeFiles/cpptest.dir/Project/main.c.obj.d -o CMakeFiles/cpptest.dir/Project/main.c.obj -c C:/work/ECU/Project/main.c
 
 CMakeFiles/cpptest.dir/Project/main.c.i: cmake_force
@@ -449,7 +463,7 @@ CMakeFiles/cpptest.dir/Project/main.c.s: cmake_force
 
 CMakeFiles/cpptest.dir/startup_ARMCM4.S.obj: CMakeFiles/cpptest.dir/flags.make
 CMakeFiles/cpptest.dir/startup_ARMCM4.S.obj: C:/work/ECU/startup_ARMCM4.S
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:/work/ECU/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building ASM object CMakeFiles/cpptest.dir/startup_ARMCM4.S.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:/work/ECU/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building ASM object CMakeFiles/cpptest.dir/startup_ARMCM4.S.obj"
 	"C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/bin/arm-none-eabi-gcc.exe" -fdata-sections -ffunction-sections --specs=nano.specs -Wl,--gc-sections $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -o CMakeFiles/cpptest.dir/startup_ARMCM4.S.obj -c C:/work/ECU/startup_ARMCM4.S
 
 CMakeFiles/cpptest.dir/startup_ARMCM4.S.i: cmake_force
@@ -488,6 +502,7 @@ cpptest_OBJECTS = \
 "CMakeFiles/cpptest.dir/GD32F30x_standard_peripheral/Source/gd32f30x_usart.c.obj" \
 "CMakeFiles/cpptest.dir/GD32F30x_standard_peripheral/Source/gd32f30x_wwdgt.c.obj" \
 "CMakeFiles/cpptest.dir/Project/app.cpp.obj" \
+"CMakeFiles/cpptest.dir/Project/gpio.cpp.obj" \
 "CMakeFiles/cpptest.dir/Project/main.c.obj" \
 "CMakeFiles/cpptest.dir/startup_ARMCM4.S.obj"
 
@@ -520,10 +535,11 @@ cpptest.elf: CMakeFiles/cpptest.dir/GD32F30x_standard_peripheral/Source/gd32f30x
 cpptest.elf: CMakeFiles/cpptest.dir/GD32F30x_standard_peripheral/Source/gd32f30x_usart.c.obj
 cpptest.elf: CMakeFiles/cpptest.dir/GD32F30x_standard_peripheral/Source/gd32f30x_wwdgt.c.obj
 cpptest.elf: CMakeFiles/cpptest.dir/Project/app.cpp.obj
+cpptest.elf: CMakeFiles/cpptest.dir/Project/gpio.cpp.obj
 cpptest.elf: CMakeFiles/cpptest.dir/Project/main.c.obj
 cpptest.elf: CMakeFiles/cpptest.dir/startup_ARMCM4.S.obj
 cpptest.elf: CMakeFiles/cpptest.dir/build.make
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:/work/ECU/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Linking CXX executable cpptest.elf"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:/work/ECU/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Linking CXX executable cpptest.elf"
 	"C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/bin/arm-none-eabi-g++.exe" -fdata-sections -ffunction-sections --specs=nano.specs -Wl,--gc-sections -fno-rtti -fno-exceptions -fno-threadsafe-statics -TC:/work/ECU/gcc_arm.ld -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -Wl,-Map=cpptest.map --specs=nosys.specs -Wl,--start-group -lc -lm -lstdc++ -Wl,--end-group -Wl,--print-memory-usage $(cpptest_OBJECTS) $(cpptest_EXTERNAL_OBJECTS) -o cpptest.elf
 	arm-none-eabi-size C:/work/ECU/build/cpptest.elf
 	arm-none-eabi-objcopy -O ihex C:/work/ECU/build/cpptest.elf cpptest.hex

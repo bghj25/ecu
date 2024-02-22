@@ -491,7 +491,6 @@ void gpio_deinit(uint32_t gpio_periph);
 void gpio_afio_deinit(void);
 /* GPIO parameter initialization */
 void gpio_init(uint32_t gpio_periph, uint32_t mode, uint32_t speed, uint32_t pin);
-
 /* set GPIO pin bit */
 void gpio_bit_set(uint32_t gpio_periph, uint32_t pin);
 /* reset GPIO pin bit */
