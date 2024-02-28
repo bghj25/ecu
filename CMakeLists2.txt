@@ -1,0 +1,46 @@
+cmake_minimum_required(VERSION 3.13)
+
+set(CMAKE_GENERATOR "Unix Makefiles")
+
+if(NOT DEFINED ENV{LIBRARY_PATH})
+  message(WARNING "LIBRARY_PATH is not found!")
+  if (WIN32)
+    set(ENV{LIBRARY_PATH} "C:")
+  endif (WIN32)
+  if (UNIX)
+    set(ENV{LIBRARY_PATH} /home/$ENV{USER}/opt)
+  endif (UNIX)
+  message(WARNING "Set default: LIBRARY_PATH=" $ENV{LIBRARY_PATH})
+endif()
+
+set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ./cmake)
+include(External)
+
+# External dependencies: Tools
+ExternalCheck(stm32-cmake https://github.com/ObKo/stm32-cmake.git  86d1dd2d $ENV{LIBRARY_PATH}) # master 86d1dd2d
+ExternalCheck(cmsis-svd   https://github.com/posborne/cmsis-svd.git master $ENV{LIBRARY_PATH})
+
+set(CMAKE_TOOLCHAIN_FILE $ENV{LIBRARY_PATH}/stm32-cmake/cmake/stm32_gcc.cmake)
+set(STM32_TOOLCHAIN_PATH /usr)
+set(STM32_TARGET_TRIPLET arm-none-eabi)
+
+project(bsp C CXX ASM)
+
+set(PROJECT_TARGET bsp)
+
+include(${CMAKE_CURRENT_SOURCE_DIR}/boards/${BSP_TARGET}/CMakeLists.txt)
+
+set(PROJECT_SOURCES
+    ${PROJECT_SOURCES}
+    App/Src/main.cpp
+)
+
+include_directories(
+    App/Inc
+)
+
+# set(CMAKE_CXX_FLAGS "-O3 -Wall -Wextra")
+# set(CMAKE_CXX_FLAGS_DEBUG "-O3 -g -Wall -Wextra")
+
+add_executable(${PROJECT_TARGET} ${PROJECT_SOURCES})
+target_link_libraries(${PROJECT_TARGET} ${PROJECT_LIBRARIES})

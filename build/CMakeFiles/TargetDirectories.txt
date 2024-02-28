@@ -1,3 +1,0 @@
-C:/work/ECU/build/CMakeFiles/ECU.dir
-C:/work/ECU/build/CMakeFiles/edit_cache.dir
-C:/work/ECU/build/CMakeFiles/rebuild_cache.dir

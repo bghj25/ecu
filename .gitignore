@@ -1,5 +1,11 @@
 stlink-1.8.0-win32/
+build/**
+!build/*.hex
+!build/*.map
+!build/*.bin
+!build/*.elf
 *.d
 *.lst
 *.o
 *.pdf
+

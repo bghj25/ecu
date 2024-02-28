@@ -1,6 +1,10 @@
 {
     "cortex-debug.gdbPath": "C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/bin/arm-none-eabi-gdb",
-    "cortex-debug.stutilPath": "${workspaceFolder}/stlink-1.8.0-win32/bin/st-util",
+   
+    //"cortex-debug.gdbPath": "C:\\work\\EmbeddedBuilder_v1.3.5.21587\\Tools\\GDLinkGDBServer\\GDLinkGDBServer.exe",
+    //"cortex-debug.gdbPath": "C:\\work\\EmbeddedBuilder_v1.3.5.21587\\Tools\\GNU Tools ARM Embedded\\xpack-arm-none-eabi-gcc\\9.2.1-1.1\\bin\\arm-none-eabi-gbd.exe",
+    "cortex-debug.objdumpPath": "arm-none-eabi-objdump",
+    "cortex-debug.openocdPath": "",
     "files.associations": {
         "gd32f30x_adc.h": "c",
         "gd32f30x.h": "c",

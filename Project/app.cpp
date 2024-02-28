@@ -8,14 +8,14 @@ void cpp()
 	while(true)
 	{
 		LedC0.Set();
-		for(int i=0; i < 100000; i++)
+		for(int i=0; i < 10000000; i++)
 		{
-			
+			//asm("nop");
 		}
 		LedC0.Reset();
-		for(int i=0; i < 100000; i++)
+		for(int i=0; i < 10000000; i++)
 		{
-			
+			//asm("nop");
 		}
 	}
 }

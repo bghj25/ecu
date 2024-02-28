@@ -8,13 +8,22 @@
         {
             "name": "Cortex Debug",
             "cwd": "${workspaceFolder}",
-            "executable": "${workspaceFolder}/build/cpptest.elf",
+            "executable": "${workspaceFolder}/build/ECU.elf",
             "request": "launch",
             "type": "cortex-debug",
-            "runToEntryPoint": "main",
-            "device": "STM32F103C8",
-            "servertype": "stutil",
-            "svdFile": "${workspaceFolder}/STM32F103.svd",
+            //"runToEntryPoint": "main",
+            "device": "GD32F307VCT6",
+            "servertype": "openocd",
+            //"gdbServerConsolePort": 51118,
+            "configFiles": 
+                ["${workspaceFolder}/openocd_gdlink_gd32f30x.cfg",
+                "${workspaceFolder}/cmsis-dap.cfg"
+            ],
+            "liveWatch": {
+                "enabled": true,
+                "samplesPerSecond": 4
+            },
+            "svdFile": "${workspaceFolder}/GD32F30x_CL.svd",
             "showDevDebugOutput": "raw"
         }
     ]

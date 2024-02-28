@@ -99,20 +99,30 @@ ${CPU_PARAMETERS}
     -Wundef
     -fno-common
     -Wno-unused-parameter
+    -Og
+    -I
+    -L
+    -g
     $<$<COMPILE_LANGUAGE:CXX>:
         -Wconversion # STM libraries!
         -Wno-volatile
         -Wold-style-cast
         -Wuseless-cast
-        -Wsuggest-override>
-    $<$<CONFIG:Debug>:-Og -g3 -ggdb>
-    $<$<CONFIG:Release>:-Og -g0>)
+        -Wsuggest-override>)
+        #$<$<CONFIG:Debug>:-O3 -ggdb>)
+       # $<$<CONFIG:Debug>:-Og -g3 -ggdb>
+    #$<$<CONFIG:Release>:-Og -g3 -ggdb>)
+    #$<$<CONFIG:Release>:-Og -g0>)
 
 target_link_options(${EXECUTABLE} PRIVATE
     -T${MCU_LINKER_SCRIPT}
     ${CPU_PARAMETERS}
     -Wl,-Map=${CMAKE_PROJECT_NAME}.map
-    --specs=nosys.specs
+    -Og
+    #-I
+    #-L
+    -ggdb
+    #-Og -ggdb
     -Wl,--start-group
     -lc
     -lm
