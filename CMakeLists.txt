@@ -25,7 +25,7 @@ set(CMAKE_TRY_COMPILE_TARGET_TYPE STATIC_LIBRARY)
 
 project(ECU)
 
-set(PROJECT_DIR ${CMAKE_CURRENT_SOURCE_DIR}/Project)
+set(PROJECT_DIR ${CMAKE_CURRENT_SOURCE_DIR}/Src)
 
 set(CC, arm-none-eabi-gcc)
 option(DUMP_ASM "Create full assembly of final executable" OFF)
@@ -60,8 +60,10 @@ set(LIB_INCLUDE_DIRECTORIES
     ${CMAKE_CURRENT_SOURCE_DIR}/GD32F30x_standard_peripheral/Include)
                                 
 set(PROJECT_INCLUDE_DIRECTORIES 
-    ${CMAKE_CURRENT_SOURCE_DIR}
+    ${CMAKE_CURRENT_SOURCE_DIR}/Inc
     ${PROJECT_DIR})
+
+
 
 file(GLOB_RECURSE LIB_SOURCES CONFIGURE_DEPENDS
     ${CMAKE_CURRENT_SOURCE_DIR}/CMSIS/*.c
