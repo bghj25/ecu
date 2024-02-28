@@ -1,4 +1,5 @@
 stlink-1.8.0-win32/
+doc/
 build/**
 !build/*.hex
 !build/*.map

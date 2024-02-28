@@ -16,14 +16,14 @@
             "servertype": "openocd",
             //"gdbServerConsolePort": 51118,
             "configFiles": 
-                ["${workspaceFolder}/openocd_gdlink_gd32f30x.cfg",
-                "${workspaceFolder}/cmsis-dap.cfg"
+                ["${workspaceFolder}/System/openocd_gdlink_gd32f30x.cfg",
+                "${workspaceFolder}/System/cmsis-dap.cfg"
             ],
             "liveWatch": {
                 "enabled": true,
                 "samplesPerSecond": 4
             },
-            "svdFile": "${workspaceFolder}/GD32F30x_CL.svd",
+            "svdFile": "${workspaceFolder}/System/GD32F30x_CL.svd",
             "showDevDebugOutput": "raw"
         }
     ]

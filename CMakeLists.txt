@@ -25,7 +25,8 @@ set(CMAKE_TRY_COMPILE_TARGET_TYPE STATIC_LIBRARY)
 
 project(ECU)
 
-set(PROJECT_DIR ${CMAKE_CURRENT_SOURCE_DIR}/Src)
+set(PROJECT_DIR ${CMAKE_CURRENT_SOURCE_DIR}/Project)
+set(PERIPH_DIR ${CMAKE_CURRENT_SOURCE_DIR}/Periph)
 
 set(CC, arm-none-eabi-gcc)
 option(DUMP_ASM "Create full assembly of final executable" OFF)
@@ -39,8 +40,8 @@ set(CPU_PARAMETERS
     #-mfpu=fpv4-sp-d16
     -mfloat-abi=soft)
 
-set(STARTUP_SCRIPT ${CMAKE_CURRENT_SOURCE_DIR}/startup_ARMCM4.s)
-set(MCU_LINKER_SCRIPT ${CMAKE_CURRENT_SOURCE_DIR}/gcc_arm.ld)
+set(STARTUP_SCRIPT ${CMAKE_CURRENT_SOURCE_DIR}/System/startup_ARMCM4.s)
+set(MCU_LINKER_SCRIPT ${CMAKE_CURRENT_SOURCE_DIR}/System/gcc_arm.ld)
 
 ###############################################################################
 set(EXECUTABLE ${CMAKE_PROJECT_NAME})
@@ -59,10 +60,14 @@ set(LIB_INCLUDE_DIRECTORIES
     ${CMAKE_CURRENT_SOURCE_DIR}/CMSIS/GD/GD32F30x/Include
     ${CMAKE_CURRENT_SOURCE_DIR}/GD32F30x_standard_peripheral/Include)
                                 
-set(PROJECT_INCLUDE_DIRECTORIES 
-    ${CMAKE_CURRENT_SOURCE_DIR}/Inc
-    ${PROJECT_DIR})
+set(PROJECT_INCLUDE_DIRECTORIES
+    ${PERIPH_DIR}/CAN/Inc
+    ${PERIPH_DIR}/SPI/Inc
+    ${PERIPH_DIR}/GPIO/Inc
 
+    ${CMAKE_CURRENT_SOURCE_DIR}/Project/Inc
+    
+    )
 
 
 file(GLOB_RECURSE LIB_SOURCES CONFIGURE_DEPENDS
@@ -71,7 +76,9 @@ file(GLOB_RECURSE LIB_SOURCES CONFIGURE_DEPENDS
 
 file(GLOB_RECURSE PROJECT_SOURCES CONFIGURE_DEPENDS
     ${PROJECT_DIR}/*.cpp
-    ${PROJECT_DIR}/*.c)
+    ${PROJECT_DIR}/*.c
+    ${PERIPH_DIR}/*.cpp
+    ${PERIPH_DIR}/*.c)
 
 add_executable(${EXECUTABLE}
     ${LIB_SOURCES} 

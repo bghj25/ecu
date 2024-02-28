@@ -7,7 +7,8 @@
                 "${workspaceFolder}/CMSIS",
                 "${workspaceFolder}/CMSIS/GD/GD32F30x/Include",
                 "${workspaceFolder}/GD32F30x_standard_peripheral/Include",
-                "${workspaceFolder}/Src/**",
+                "${workspaceFolder}/Project/**",
+                "${workspaceFolder}/Periph/**",
                 "C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/arm-none-eabi/include",
                 "C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/arm-none-eabi/include/c++/13.2.1",
                 "C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/lib/gcc/arm-none-eabi/13.2.1/include-fixed",
@@ -27,6 +28,7 @@
             "cStandard": "c17",
             "cppStandard": "c++17",
             "intelliSenseMode": "windows-gcc-arm"
+            ""
         }
     ],
     "version": 4
