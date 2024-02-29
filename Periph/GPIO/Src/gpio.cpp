@@ -8,9 +8,8 @@ GpioPin::GpioPin(uint32_t port, uint32_t mode, uint32_t speed, uint32_t pin)
 		mGpioSpeed(speed)
 {
 	gpio_init(mGpioPort, mGpioMode, mGpioSpeed, mGpioPin);
-	
 }
-  
+
 void GpioPin::Set()
 {
   gpio_bit_write(mGpioPort, mGpioPin, SET);
