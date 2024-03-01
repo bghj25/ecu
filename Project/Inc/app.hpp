@@ -3,12 +3,14 @@
 #ifdef __cplusplus
 #include "can.hpp"
 #include "gpio.hpp"
+#include "spi.hpp"
+
+
 //#include "it.hpp"
 
 extern "C"
 {
 #endif
-
 
 
 

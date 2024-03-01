@@ -94,6 +94,24 @@ void cpp()
     }
 	msgT.tx_dlen = sizeof(msgT.tx_data) / sizeof(msgT.tx_data[0]);
 	
+
+	/* SPI0 GPIO config: SCK/PA5, MISO/PA6, MOSI/PA7, PA3 as NSS */
+	GpioPin Spi0SCK_MOSI(GPIOA, GPIO_MODE_IN_FLOATING, GPIO_OSPEED_50MHZ, GPIO_PIN_5);
+	GpioPin Spi0MISO(GPIOA, GPIO_MODE_AF_PP, GPIO_OSPEED_50MHZ, GPIO_PIN_6);
+	GpioPin Spi0NSS(GPIOA, GPIO_MODE_IN_FLOATING, GPIO_OSPEED_50MHZ, GPIO_PIN_3);
+	
+	Spi Spi0(SPI0);
+	Spi0.SpiParam.device_mode = SPI_SLAVE;
+	Spi0.SpiParam.nss = SPI_NSS_HARD;
+	Spi0.SpiParam.prescale = SPI_PSC_4;
+	Spi0.SpiParam.clock_polarity_phase = SPI_CK_PL_LOW_PH_2EDGE;
+	Spi0.SpiParam.endian = SPI_ENDIAN_MSB;
+	Spi0.SpiParam.frame_size = SPI_FRAMESIZE_8BIT;
+	Spi0.SpiParam.trans_mode = SPI_TRANSMODE_FULLDUPLEX;
+	Spi0.SpiInit();
+	//DMA
+	Spi0.SpiEnable();
+
 	while(1)
 	{
 		if(MsgReceivedd == SET)

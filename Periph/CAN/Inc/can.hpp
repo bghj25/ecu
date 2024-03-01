@@ -22,7 +22,6 @@ public:
     can_parameter_struct CanParam;
     can_receive_message_struct RxParam;
     can_trasnmit_message_struct TxParam;
-    static can_filter_parameter_struct FilterParam;
 
 private:
     uint32_t mCanPeriph;
