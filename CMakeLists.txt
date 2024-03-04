@@ -111,13 +111,19 @@ ${CPU_PARAMETERS}
     -Og
     -I
     -L
+    -ggdb
     -g
     $<$<COMPILE_LANGUAGE:CXX>:
         -Wconversion # STM libraries!
         -Wno-volatile
         -Wold-style-cast
         -Wuseless-cast
-        -Wsuggest-override>)
+        -Wsuggest-override>
+        -Og
+        -I
+        -L
+        -ggdb
+        -g)
         #$<$<CONFIG:Debug>:-O3 -ggdb>)
        # $<$<CONFIG:Debug>:-Og -g3 -ggdb>
     #$<$<CONFIG:Release>:-Og -g3 -ggdb>)
@@ -128,9 +134,10 @@ target_link_options(${EXECUTABLE} PRIVATE
     ${CPU_PARAMETERS}
     -Wl,-Map=${CMAKE_PROJECT_NAME}.map
     -Og
-    #-I
-    #-L
+    -I
+    -L
     -ggdb
+    -g
     #-Og -ggdb
     -Wl,--start-group
     -lc

@@ -5,7 +5,8 @@
 int main(void)
 {
 	rcu_periph_clock_enable(RCU_GPIOC);
-	rcu_periph_clock_enable(RCU_GPIOA);	
+	rcu_periph_clock_enable(RCU_GPIOA);
+	rcu_periph_clock_enable(RCU_GPIOD);	
 	rcu_periph_clock_enable(RCU_AF);
 	rcu_periph_clock_enable(RCU_CAN0);
 	rcu_periph_clock_enable(RCU_SPI0);

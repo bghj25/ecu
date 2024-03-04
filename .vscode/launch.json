@@ -11,20 +11,34 @@
             "executable": "${workspaceFolder}/build/ECU.elf",
             "request": "launch",
             "type": "cortex-debug",
-            //"runToEntryPoint": "main",
+            "runToEntryPoint": "ResetHandler",
+            //"runToMain": true,
             "device": "GD32F307VCT6",
             "servertype": "openocd",
+            
             //"gdbServerConsolePort": 51118,
             "configFiles": 
-                ["${workspaceFolder}/System/openocd_gdlink_gd32f30x.cfg",
-                "${workspaceFolder}/System/cmsis-dap.cfg"
+                [
+                "${workspaceFolder}/System/cmsis-dap.cfg",
+                "${workspaceFolder}/System/openocd_gdlink_gd32f30x.cfg"
+                //"${workspaceFolder}/System/gd32f30x.cfg"
+                
             ],
             "liveWatch": {
                 "enabled": true,
-                "samplesPerSecond": 4
+                "samplesPerSecond": 1
             },
             "svdFile": "${workspaceFolder}/System/GD32F30x_CL.svd",
-            "showDevDebugOutput": "raw"
+            "showDevDebugOutput": "raw",
+            "swoConfig": {
+                "enabled": true,
+                "cpuFrequency": 120000000,
+                "swoFrequency": 2000000,
+                "source": "probe",
+                "decoders": [
+                    { "type": "console", "label": "ITM", "port": 0 }
+                ]
+            }
         }
     ]
 }

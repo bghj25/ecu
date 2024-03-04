@@ -239,6 +239,16 @@ Default_Handler:
                 .fnend
                 .size    Default_Handler, . - Default_Handler
 
+/*
+                .thumb_func
+                .type    CAN0_RX0_IRQHandler, %function
+                .globl    CAN0_RX0_IRQHandler
+                .fnstart
+CAN0_RX0_IRQHandler:
+                bl CAN0_RX0_IRQHandler_ovr
+                .fnend
+                .size    Default_Handler, . - Default_Handler
+*/
 /* Macro to define default exception/interrupt handlers.
  * Default handler are weak symbols with an endless loop.
  * They can be overwritten by real handlers.

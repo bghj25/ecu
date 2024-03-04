@@ -1,0 +1,65 @@
+int Spi::transmit_receive(uint8_t *tx, uint8_t *rx) {
+
+    //MSG from Vitold's script
+    Message vitold_msg;
+
+    CanFrame* frame = vitold_msg.mutable_data()->add_frame();
+    frame->set_can_number(0);
+    frame->set_id(0x18DA40F1);
+    frame->set_length(8);
+
+    frame->add_data(0x03);
+    frame->add_data(0x22);
+    frame->add_data(0xf1);
+    frame->add_data(0x92);
+    frame->add_data(0xcc);
+    frame->add_data(0xcc);
+    frame->add_data(0xcc);
+    frame->add_data(0xcc);
+
+    size_t size = vitold_msg.ByteSizeLong(); 
+    char *proto_buffer = new char[size];
+    std::cout << "size: " << size << std::endl;
+    bool status_encode = vitold_msg.SerializeToArray(proto_buffer, size);
+    std::cout << "status encode " << status_encode << std::endl;
+
+    std::uint16_t crc = CRC::Calculate(proto_buffer, size, CRC::CRC_16_BUYPASS());
+    char *spi_buffer = new char[size + this->crc_size_bytes + this->msg_len_size_bytes];
+    std::memcpy(spi_buffer, &size, this->msg_len_size_bytes);
+    std::memcpy(spi_buffer + this->msg_len_size_bytes, proto_buffer, size);
+    spi_buffer[this->msg_len_size_bytes + size] = (char)(crc & 0xff);
+    spi_buffer[this->msg_len_size_bytes + size + 1] = (char)(crc >> 8);
+    std::cout << "crc " << crc << std::endl;
+
+    //full array 24 00 0a 22 0a 20 08 00 18 f1 81 e9 c6 01 20 08 28 03 28 22 28 f1 01 28 92 01 28 cc 01 28 cc 01 28 cc 01 28 cc 01 8d f7
+    //size 24 00 (36)
+    //crc  8d f7 (63375)
+
+    char *spi_buffer_rx = new char[this->rx_tx_buf_size];
+    char *proto_rx = new char[this->rx_tx_buf_size];
+    std::memcpy(spi_buffer_rx, spi_buffer, size + this->crc_size_bytes + this->msg_len_size_bytes);
+
+    uint16_t size_rx = (uint16_t)((uint8_t)spi_buffer_rx[0] | (uint16_t)((uint8_t)spi_buffer_rx[1] << 8));
+    std::cout << "size rx " << size_rx << std::endl;
+    uint16_t crc_rx = (uint16_t) ((uint8_t)spi_buffer_rx[size_rx+2] | (uint16_t)((uint8_t)spi_buffer_rx[size_rx + 3] << 8));
+    std::cout << "crc_rx " << crc_rx << std::endl;
+    std::memcpy(proto_rx, spi_buffer + 2, size_rx);
+    std::uint16_t crc_rx_calc = CRC::Calculate(proto_rx, size_rx, CRC::CRC_16_BUYPASS());
+    if(crc_rx == crc_rx_calc) {
+        Message vitold_msg_rx;
+        bool status_decode = vitold_msg_rx.ParseFromArray(proto_rx, size_rx);
+        std::cout << "status decode " << status_decode << std::endl;
+        std::cout << vitold_msg_rx.DebugString();
+    }
+    else {
+        std::cout << "CRC rx error" << std::endl;
+    }
+
+
+    delete[] spi_buffer_rx;
+    delete[] spi_buffer;
+    delete[] proto_rx;
+
+    //TODO
+    return 0;
+}
